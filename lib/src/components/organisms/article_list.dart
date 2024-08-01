@@ -1,22 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_design_system/src/components/molecules/info_card.dart';
-
-class Article {
-  final String title;
-  final String description;
-  final String imageUrl;
-  final VoidCallback onTap;
-
-  Article({
-    required this.title,
-    required this.description,
-    required this.imageUrl,
-    required this.onTap,
-  });
-}
+import 'package:flutter_design_system/src/models/article_model.dart';
 
 class ArticleList extends StatelessWidget {
-  final List<Article> articles;
+  final List<ArticleModel> articles;
 
   const ArticleList({
     super.key,

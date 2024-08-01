@@ -29,14 +29,14 @@ class MyHomePage extends StatelessWidget {
   final TextEditingController passwordController = TextEditingController();
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
-  final List<Article> articles = [
-    Article(
+  final List<ArticleModel> articles = [
+    ArticleModel(
       title: 'Article 1',
       description: 'This is the description of article 1.',
       imageUrl: 'https://via.placeholder.com/150',
       onTap: () => print('Article 1 tapped'),
     ),
-    Article(
+    ArticleModel(
       title: 'Article 2',
       description: 'This is the description of article 2.',
       imageUrl: 'https://via.placeholder.com/150',
