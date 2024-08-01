@@ -22,6 +22,8 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
+  MyHomePage({super.key});
+
   final TextEditingController nameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
@@ -65,7 +67,16 @@ class MyHomePage extends StatelessWidget {
     },
   ];
 
-  MyHomePage({super.key});
+  final List<CategoryModel> categories = [
+    CategoryModel(name: 'Electronics', icon: Icons.electrical_services),
+    CategoryModel(name: 'Fashion', icon: Icons.checkroom),
+    CategoryModel(name: 'Home', icon: Icons.home),
+    CategoryModel(name: 'Beauty', icon: Icons.brush),
+  ];
+
+  void onCategorySelected(String categoryName) {
+    print('Category selected: $categoryName');
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -151,7 +162,12 @@ class MyHomePage extends StatelessWidget {
                         print('${products[0]['title']} added to cart'),
                   );
                 },
-              )
+              ),
+              const SizedBox(height: 16.0),
+              CategoryList(
+                categories: categories,
+                onCategorySelected: onCategorySelected,
+              ),
             ],
           ),
         ),
