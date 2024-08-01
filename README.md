@@ -1,39 +1,105 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Flutter Design System
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+Flutter Design System es un paquete de Flutter que proporciona una colección de componentes reutilizables para acelerar el desarrollo de tu aplicación. Incluye widgets comunes como botones, campos de texto personalizados, y más.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+## Instalación
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+1. Agrega esta línea a tu archivo `pubspec.yaml` en la sección de dependencias:
 
-## Features
+   ```yaml
+   dependencies:
+     flutter_design_system:
+       git:
+         url: https://github.com/JuanJose21/flutter-design-system
+         ref: master
+   ```
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+2. Instala las dependencias:
+   ```bash
+   flutter pub get
+   ```
 
-## Getting started
+## Uso
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+Importa el paquete en tu archivo de Dart donde quieras utilizar los componentes:
 
 ```dart
-const like = 'sample';
+import 'package:flutter_design_system/flutter_design_system.dart';
 ```
 
-## Additional information
+### Componentes Disponibles
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+#### CustomButton
+
+Un botón personalizado con estilo predefinido.
+
+**Uso:**
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:flutter_design_system/flutter_design_system.dart';
+
+class MyScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('My Screen'),
+      ),
+      body: Center(
+        child: CustomButton(
+          text: 'Click Me',
+          onPressed: () {
+            print('Button Pressed!');
+          },
+        ),
+      ),
+    );
+  }
+}
+```
+
+#### CustomTextField
+
+Un campo de texto personalizado con estilo predefinido.
+
+**Uso:**
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:flutter_design_system/flutter_design_system.dart';
+
+class MyFormScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('My Form'),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            CustomTextField(
+              controller: TextEditingController(),
+              hintText: 'Enter your text',
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+```
+
+### Más Componentes
+
+Consulta la documentación completa y los ejemplos de uso para cada componente en el [repositorio de GitHub](https://github.com/JuanJose21/flutter-design-system).
+
+## Contribuciones
+
+¡Las contribuciones son bienvenidas! Si encuentras un problema o tienes una sugerencia, abre un issue o envía un pull request en el [repositorio de GitHub](https://github.com/JuanJose21/flutter-design-system).
+
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia MIT - consulta el archivo [LICENSE](LICENSE) para más detalles.
