@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_design_system/src/components/atoms/custom_label.dart';
+import 'package:flutter_design_system_store/src/components/atoms/custom_label.dart';
 
 /// A card widget that displays information in a structured manner.
 ///

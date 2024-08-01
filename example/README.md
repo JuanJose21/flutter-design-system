@@ -1,10 +1,10 @@
 # Ejemplos de Flutter Design System
 
-Esta carpeta contiene ejemplos de cómo usar los componentes del paquete `flutter_design_system` en una aplicación de Flutter. Cada ejemplo está diseñado para mostrar la funcionalidad y el uso de diferentes componentes incluidos en el paquete.
+Esta carpeta contiene ejemplos de cómo usar los componentes del paquete `flutter_design_system_store` en una aplicación de Flutter. Cada ejemplo está diseñado para mostrar la funcionalidad y el uso de diferentes componentes incluidos en el paquete.
 
 ## Instalación
 
-Antes de ejecutar los ejemplos, asegúrate de tener el paquete `flutter_design_system` correctamente instalado. Sigue estos pasos:
+Antes de ejecutar los ejemplos, asegúrate de tener el paquete `flutter_design_system_store` correctamente instalado. Sigue estos pasos:
 
 1. Abre una terminal en la carpeta raíz del proyecto.
 2. Ejecuta el siguiente comando para obtener las dependencias:

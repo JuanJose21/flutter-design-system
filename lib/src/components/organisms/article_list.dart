@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_design_system/src/components/molecules/info_card.dart';
-import 'package:flutter_design_system/src/models/article_model.dart';
+import 'package:flutter_design_system_store/src/components/molecules/info_card.dart';
+import 'package:flutter_design_system_store/src/models/article_model.dart';
 
 /// A article list organism that displays a list of articles.
 ///

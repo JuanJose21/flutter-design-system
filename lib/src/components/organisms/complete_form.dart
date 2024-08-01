@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_design_system/src/components/atoms/custom_button.dart';
-import 'package:flutter_design_system/src/components/atoms/custom_text_field.dart';
+import 'package:flutter_design_system_store/src/components/atoms/custom_button.dart';
+import 'package:flutter_design_system_store/src/components/atoms/custom_text_field.dart';
 
 /// A form widget that allows users to complete their profile.
 ///

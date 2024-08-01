@@ -8,7 +8,7 @@ Flutter Design System es un paquete de Flutter que proporciona una colección de
 
    ```yaml
    dependencies:
-     flutter_design_system:
+     flutter_design_system_store:
        git:
          url: https://github.com/JuanJose21/flutter-design-system
          ref: master
@@ -24,7 +24,7 @@ Flutter Design System es un paquete de Flutter que proporciona una colección de
 Importa el paquete en tu archivo de Dart donde quieras utilizar los componentes:
 
 ```dart
-import 'package:flutter_design_system/flutter_design_system.dart';
+import 'package:flutter_design_system_store/flutter_design_system_store.dart';
 ```
 
 ### Componentes Disponibles
@@ -37,7 +37,7 @@ Un botón personalizado con estilo predefinido.
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:flutter_design_system/flutter_design_system.dart';
+import 'package:flutter_design_system_store/flutter_design_system_store.dart';
 
 class MyScreen extends StatelessWidget {
   @override
@@ -67,7 +67,7 @@ Un campo de texto personalizado con estilo predefinido.
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:flutter_design_system/flutter_design_system.dart';
+import 'package:flutter_design_system_store/flutter_design_system_store.dart';
 
 class MyFormScreen extends StatelessWidget {
   @override

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_design_system/flutter_design_system.dart';
+import 'package:flutter_design_system_store/flutter_design_system_store.dart';
 
 /// A list of categories that can be selected.
 ///
