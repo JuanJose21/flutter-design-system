@@ -78,6 +78,22 @@ class MyHomePage extends StatelessWidget {
     print('Category selected: $categoryName');
   }
 
+  Widget customDividerWithText(BuildContext context, String text) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const SizedBox(height: 16.0),
+        const Divider(),
+        const SizedBox(height: 16.0),
+        Text(
+          text,
+          style: const TextStyle(fontStyle: FontStyle.italic),
+        ),
+        const SizedBox(height: 8.0),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -91,6 +107,7 @@ class MyHomePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              customDividerWithText(context, 'Header'),
               Header(
                 title: 'Welcome to the App',
                 leadingIcon:
@@ -103,25 +120,25 @@ class MyHomePage extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 16.0),
+              customDividerWithText(context, 'Info Card'),
               const InfoCard(
                 title: 'Info Card Title',
                 description: 'This is an info card description.',
                 leadingIcon: CustomIcon(icon: Icons.info, color: Colors.blue),
               ),
-              const SizedBox(height: 16.0),
+              customDividerWithText(context, 'Button'),
               CustomButton(
                 label: 'Custom Button',
                 onPressed: () => print('Custom Button Pressed'),
               ),
-              const SizedBox(height: 16.0),
+              customDividerWithText(context, 'Input'),
               FormInput(
                 labelText: 'Form Input Label',
                 hintText: 'Enter some text',
                 controller: nameController,
                 keyboardType: TextInputType.text,
               ),
-              const SizedBox(height: 16.0),
+              customDividerWithText(context, 'Form'),
               CompleteForm(
                 formKey: formKey,
                 nameController: nameController,
@@ -131,9 +148,9 @@ class MyHomePage extends StatelessWidget {
                   print('Form Submitted');
                 },
               ),
-              const SizedBox(height: 16.0),
+              customDividerWithText(context, 'Articles'),
               ArticleList(articles: articles),
-              const SizedBox(height: 16.0),
+              customDividerWithText(context, 'Image'),
               CustomImage(
                 imageUrl: 'https://via.placeholder.com/150',
                 width: 150.0,
@@ -142,7 +159,7 @@ class MyHomePage extends StatelessWidget {
                 fit: BoxFit.cover,
                 placeholderColor: Colors.grey.shade300,
               ),
-              const SizedBox(height: 16.0),
+              customDividerWithText(context, 'Product Card'),
               GridView.builder(
                 scrollDirection: Axis.vertical,
                 shrinkWrap: true,
@@ -155,15 +172,15 @@ class MyHomePage extends StatelessWidget {
                 itemCount: products.length,
                 itemBuilder: (context, index) {
                   return ProductCard(
-                    imageUrl: products[0]['imageUrl']!,
-                    title: products[0]['title']!,
-                    price: products[0]['price']!,
+                    imageUrl: products[index]['imageUrl']!,
+                    title: products[index]['title']!,
+                    price: products[index]['price']!,
                     onAddToCart: () =>
-                        print('${products[0]['title']} added to cart'),
+                        print('${products[index]['title']} added to cart'),
                   );
                 },
               ),
-              const SizedBox(height: 16.0),
+              customDividerWithText(context, 'Categories'),
               CategoryList(
                 categories: categories,
                 onCategorySelected: onCategorySelected,
