@@ -2,6 +2,29 @@ import 'package:flutter/material.dart';
 import 'package:flutter_design_system/src/components/molecules/info_card.dart';
 import 'package:flutter_design_system/src/models/article_model.dart';
 
+/// A article list organism that displays a list of articles.
+///
+/// example:
+/// ```dart
+/// final articles = [
+///   ArticleModel(
+///     title: 'Article 1',
+///     description: 'This is the description of article 1.',
+///     imageUrl: 'https://via.placeholder.com/150',
+///     onTap: () => print('Article 1 tapped'),
+///   ),
+///   ArticleModel(
+///     title: 'Article 2',
+///     description: 'This is the description of article 2.',
+///     imageUrl: 'https://via.placeholder.com/150',
+///     onTap: () => print('Article 2 tapped'),
+///   ),
+/// ];
+///
+/// ArticleList(
+///   articles: articles,
+/// )
+/// ```
 class ArticleList extends StatelessWidget {
   final List<ArticleModel> articles;
 
