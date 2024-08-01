@@ -40,7 +40,29 @@ class MyHomePage extends StatelessWidget {
       imageUrl: 'https://via.placeholder.com/150',
       onTap: () => print('Article 2 tapped'),
     ),
-    // Add more articles as needed
+  ];
+
+  final List<Map<String, String>> products = [
+    {
+      'imageUrl': 'https://via.placeholder.com/150',
+      'title': 'Product 1',
+      'price': '\$29.99'
+    },
+    {
+      'imageUrl': 'https://via.placeholder.com/150',
+      'title': 'Product 2',
+      'price': '\$39.99'
+    },
+    {
+      'imageUrl': 'https://via.placeholder.com/150',
+      'title': 'Product 3',
+      'price': '\$19.99'
+    },
+    {
+      'imageUrl': 'https://via.placeholder.com/150',
+      'title': 'Product 4',
+      'price': '\$49.99'
+    },
   ];
 
   MyHomePage({super.key});
@@ -95,7 +117,6 @@ class MyHomePage extends StatelessWidget {
                 emailController: emailController,
                 passwordController: passwordController,
                 onSubmit: () {
-                  // Handle form submission
                   print('Form Submitted');
                 },
               ),
@@ -110,6 +131,27 @@ class MyHomePage extends StatelessWidget {
                 fit: BoxFit.cover,
                 placeholderColor: Colors.grey.shade300,
               ),
+              const SizedBox(height: 16.0),
+              GridView.builder(
+                scrollDirection: Axis.vertical,
+                shrinkWrap: true,
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 8.0,
+                  mainAxisSpacing: 8.0,
+                  childAspectRatio: 0.6,
+                ),
+                itemCount: products.length,
+                itemBuilder: (context, index) {
+                  return ProductCard(
+                    imageUrl: products[0]['imageUrl']!,
+                    title: products[0]['title']!,
+                    price: products[0]['price']!,
+                    onAddToCart: () =>
+                        print('${products[0]['title']} added to cart'),
+                  );
+                },
+              )
             ],
           ),
         ),

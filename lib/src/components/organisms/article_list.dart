@@ -33,12 +33,10 @@ class ArticleList extends StatelessWidget {
         final article = articles[index];
         return GestureDetector(
             onTap: article.onTap,
-            child: Flexible(
-              child: InfoCard(
-                title: article.title,
-                description: article.description,
-                leadingIcon: Image.network(article.imageUrl),
-              ),
+            child: InfoCard(
+              title: article.title,
+              description: article.description,
+              leadingIcon: Image.network(article.imageUrl),
             ));
       },
     );
