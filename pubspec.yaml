@@ -1,11 +1,11 @@
 name: flutter_design_system
-description: "A new Flutter package project."
+description: 'A design system for Flutter applications.'
 version: 0.0.1
-homepage:
+homepage: https://github.com/JuanJose21/flutter-design-system
 
 environment:
   sdk: '>=3.4.3 <4.0.0'
-  flutter: ">=1.17.0"
+  flutter: '>=1.17.0'
 
 dependencies:
   flutter:
