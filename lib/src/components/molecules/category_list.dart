@@ -1,6 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_design_system/flutter_design_system.dart';
 
+/// A list of categories that can be selected.
+///
+/// example:
+/// ```dart
+/// CategoryList(
+///   categories: [
+///     CategoryModel(name: 'Business', icon: Icons.business),
+///     CategoryModel(name: 'Entertainment', icon: Icons.movie),
+///     CategoryModel(name: 'General', icon: Icons.public),
+///     CategoryModel(name: 'Technology', icon: Icons.computer),
+///   ],
+///   onCategorySelected: (category) => print('Category selected: $category'),
+/// )
+/// ```
 class CategoryList extends StatelessWidget {
   final List<CategoryModel> categories;
   final ValueChanged<String> onCategorySelected;

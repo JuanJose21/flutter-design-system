@@ -1,5 +1,20 @@
 import 'package:flutter/material.dart';
 
+/// A customizable label widget that allows for various styling options.
+///
+/// example:
+/// ```dart
+/// CustomLabel(
+///   text: 'Hello, World!',
+///   style: TextStyle(
+///     color: Colors.blue,
+///     fontSize: 24.0,
+///   ),
+///   textAlign: TextAlign.center,
+///   maxLines: 2,
+///   overflow: TextOverflow.ellipsis,
+/// )
+/// ```
 class CustomLabel extends StatelessWidget {
   final String text;
   final TextStyle? style;

@@ -1,6 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_design_system/src/components/atoms/custom_label.dart';
 
+/// A card widget that displays information in a structured manner.
+///
+/// example:
+/// ```dart
+/// InfoCard(
+///   title: 'Title',
+///   description: 'Description',
+///   leadingIcon: Icon(Icons.info),
+///   backgroundColor: Colors.blue,
+///   padding: const EdgeInsets.all(16.0),
+/// )
+/// ```
 class InfoCard extends StatelessWidget {
   final String title;
   final String description;

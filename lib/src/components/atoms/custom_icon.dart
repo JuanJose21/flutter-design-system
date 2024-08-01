@@ -1,5 +1,16 @@
 import 'package:flutter/material.dart';
 
+/// A customizable icon widget that allows for various styling options.
+///
+/// example:
+/// ```dart
+/// CustomIcon(
+///   icon: Icons.favorite,
+///   color: Colors.red,
+///   size: 32.0,
+///   padding: const EdgeInsets.all(8.0),
+/// )
+/// ```
 class CustomIcon extends StatelessWidget {
   final IconData icon;
   final Color? color;

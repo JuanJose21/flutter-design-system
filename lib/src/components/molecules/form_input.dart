@@ -2,6 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:flutter_design_system/src/components/atoms/custom_label.dart';
 import 'package:flutter_design_system/src/components/atoms/custom_text_field.dart';
 
+/// A form input molecule that consists of a label and a text field.
+///
+/// example:
+/// ```dart
+/// FormInput(
+///   labelText: 'Email',
+///   hintText: 'Enter your email',
+///   controller: emailController,
+///   keyboardType: TextInputType.emailAddress,
+///   obscureText: false,
+///   prefixIcon: Icon(Icons.email),
+///   validator: (value) {
+///     if (value == null || value.isEmpty) {
+///       return 'Please enter your email';
+///     }
+///     return null;
+///   }
+/// )
+/// ```
 class FormInput extends StatelessWidget {
   final String labelText;
   final String? hintText;

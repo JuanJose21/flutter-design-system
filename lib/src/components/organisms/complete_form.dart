@@ -2,6 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_design_system/src/components/atoms/custom_button.dart';
 import 'package:flutter_design_system/src/components/atoms/custom_text_field.dart';
 
+/// A form widget that allows users to complete their profile.
+///
+/// example:
+/// ```dart
+/// CompleteForm(
+///   formKey: _formKey,
+///   nameController: _nameController,
+///   emailController: _emailController,
+///   passwordController: _passwordController,
+///   onSubmit: () {
+///     print('Form submitted');
+///   }
+/// )
+/// ```
 class CompleteForm extends StatelessWidget {
   final GlobalKey<FormState> formKey;
   final TextEditingController nameController;

@@ -1,6 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_design_system/flutter_design_system.dart';
 
+/// A card widget that displays product information in a structured manner.
+///
+/// example:
+/// ```dart
+/// ProductCard(
+///   imageUrl: 'https://via.placeholder.com/150',
+///   title: 'Product Title',
+///   price: '\$100.00',
+///   onAddToCart: () {
+///     print('Added to cart!');
+///   },
+/// )
+/// ```
 class ProductCard extends StatelessWidget {
   final String imageUrl;
   final String title;

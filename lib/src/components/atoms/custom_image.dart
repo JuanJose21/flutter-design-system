@@ -1,5 +1,18 @@
 import 'package:flutter/material.dart';
 
+/// A customizable image widget that allows for various styling options.
+///
+/// example:
+/// ```dart
+/// CustomImage(
+///   imageUrl: 'https://via.placeholder.com/150',
+///   width: 100.0,
+///   height: 100.0,
+///   borderRadius: 8.0,
+///   fit: BoxFit.cover,
+///   placeholderColor: Colors.grey.shade300,
+/// )
+/// ```
 class CustomImage extends StatelessWidget {
   final String imageUrl;
   final double width;

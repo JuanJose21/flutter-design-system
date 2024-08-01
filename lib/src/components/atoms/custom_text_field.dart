@@ -1,5 +1,24 @@
 import 'package:flutter/material.dart';
 
+/// A customizable text field widget that allows for various styling options.
+///
+/// example:
+/// ```dart
+/// CustomTextField(
+///   labelText: 'Email',
+///   hintText: 'Enter your email',
+///   controller: emailController,
+///   keyboardType: TextInputType.emailAddress,
+///   obscureText: false,
+///   prefixIcon: Icon(Icons.email),
+///   validator: (value) {
+///     if (value == null || value.isEmpty) {
+///       return 'Please enter your email';
+///     }
+///     return null;
+///   }
+/// )
+/// ```
 class CustomTextField extends StatelessWidget {
   final String? labelText;
   final String? hintText;

@@ -1,5 +1,18 @@
 import 'package:flutter/material.dart';
 
+/// A customizable icon button widget that allows for various styling options.
+///
+/// example:
+/// ```dart
+/// CustomIconButton(
+///   icon: Icons.add,
+///   onPressed: () => print('Button pressed'),
+///   color: Colors.blue,
+///   iconSize: 24.0,
+///   buttonSize: 48.0,
+///   padding: const EdgeInsets.all(8.0),
+/// )
+/// ```
 class CustomIconButton extends StatelessWidget {
   final IconData icon;
   final VoidCallback onPressed;
