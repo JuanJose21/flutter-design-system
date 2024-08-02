@@ -6,6 +6,11 @@ import 'package:flutter_design_system_store/src/components/atoms/custom_text_fie
 ///
 /// example:
 /// ```dart
+/// _formKey = GlobalKey<FormState>();
+/// _nameController = TextEditingController();
+/// _emailController = TextEditingController();
+/// _passwordController = TextEditingController();
+///
 /// CompleteForm(
 ///   formKey: _formKey,
 ///   nameController: _nameController,
