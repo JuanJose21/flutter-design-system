@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_design_system_store/src/components/molecules/product_card.dart';
+import 'package:flutter_package_api_fake_store/flutter_package_api_fake_store.dart';
 
 /// ProductList is a list of products.
 ///
@@ -24,7 +25,7 @@ import 'package:flutter_design_system_store/src/components/molecules/product_car
 /// )
 /// ```
 class ProductList extends StatelessWidget {
-  final List<Map<String, dynamic>> products;
+  final List<ProductModel> products;
   final VoidCallback onProductTap;
 
   const ProductList(
@@ -38,9 +39,9 @@ class ProductList extends StatelessWidget {
       itemBuilder: (context, index) {
         final product = products[index];
         return ProductCard(
-          title: product['name'],
-          imageUrl: product['imageUrl'],
-          price: product['price'],
+          title: product.title,
+          imageUrl: product.image,
+          price: product.price.toString(),
           onAddToCart: () => onProductTap,
         );
       },

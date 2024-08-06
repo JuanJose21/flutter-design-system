@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_design_system_store/flutter_design_system_store.dart';
+import 'package:flutter_package_api_fake_store/flutter_package_api_fake_store.dart';
 
 /// A list of categories that can be selected.
 ///
@@ -7,16 +7,15 @@ import 'package:flutter_design_system_store/flutter_design_system_store.dart';
 /// ```dart
 /// CategoryList(
 ///   categories: [
-///     CategoryModel(name: 'Business', icon: Icons.business),
-///     CategoryModel(name: 'Entertainment', icon: Icons.movie),
-///     CategoryModel(name: 'General', icon: Icons.public),
-///     CategoryModel(name: 'Technology', icon: Icons.computer),
+///     CategoryEnum.electronics,
+///     CategoryEnum.jewelery,
+///     CategoryEnum.menClothing,
 ///   ],
 ///   onCategorySelected: (category) => print('Category selected: $category'),
 /// )
 /// ```
 class CategoryList extends StatelessWidget {
-  final List<CategoryModel> categories;
+  final List<CategoryEnum> categories;
   final ValueChanged<String> onCategorySelected;
 
   const CategoryList({
@@ -45,7 +44,6 @@ class CategoryList extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(category.icon, size: 32.0, color: Colors.white),
                   const SizedBox(height: 8.0),
                   Text(
                     category.name,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_design_system_store/flutter_design_system_store.dart';
+import 'package:flutter_package_api_fake_store/flutter_package_api_fake_store.dart';
 
 /// HomeTemplate is a template that shows the home screen.
 ///
@@ -7,16 +8,12 @@ import 'package:flutter_design_system_store/flutter_design_system_store.dart';
 /// ```dart
 ///
 /// final products = [
-///   {
-///     'imageUrl': 'https://via.placeholder.com/150',
-///     'name': 'Product 1',
-///     'price': '\$29.99'
-///   },
-///   {
-///     'imageUrl': 'https://via.placeholder.com/150',
-///     'name': 'Product 2',
-///     'price': '\$39.99'
-///   },
+///   ProductModel(
+///     id: 1,
+///     title: 'Product 1',
+///     price: 29.99,
+///     image: 'https://via.placeholder.com/150',
+///   ),
 /// ];
 ///
 /// HomeTemplate(
@@ -25,7 +22,7 @@ import 'package:flutter_design_system_store/flutter_design_system_store.dart';
 /// )
 /// ```
 class HomeTemplate extends StatelessWidget {
-  final List<Map<String, dynamic>> products;
+  final List<ProductModel> products;
   final VoidCallback onProductTap;
 
   const HomeTemplate(
