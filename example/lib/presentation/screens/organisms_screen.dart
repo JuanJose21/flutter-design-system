@@ -63,10 +63,6 @@ class OrganismsScreen extends StatelessWidget {
               const SizedBox(height: 16.0),
               Header(
                 title: 'Home',
-                leadingIcon: IconButton(
-                  icon: const Icon(Icons.menu),
-                  onPressed: () => print('Menu pressed'),
-                ),
                 actions: [
                   IconButton(
                     icon: const Icon(Icons.search),
