@@ -1,20 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_design_system_store/flutter_design_system_store.dart';
+import 'package:flutter_package_api_fake_store/flutter_package_api_fake_store.dart';
 
 class TemplatesScreen extends StatelessWidget {
   TemplatesScreen({super.key});
 
-  final products = [
-    {
-      'imageUrl': 'https://via.placeholder.com/150',
-      'name': 'Product 1',
-      'price': '\$29.99'
-    },
-    {
-      'imageUrl': 'https://via.placeholder.com/150',
-      'name': 'Product 2',
-      'price': '\$39.99'
-    },
+  final List<ProductModel> products = [
+    ProductModel(
+      title: 'Product 1',
+      image: 'https://via.placeholder.com/150',
+      price: 29.99,
+      description: 'This is the description of product 1.',
+      category: CategoryEnum.electronics,
+      rating: RatingModel(count: 10, rate: 4.5),
+    ),
+    ProductModel(
+      title: 'Product 2',
+      image: 'https://via.placeholder.com/150',
+      price: 19.99,
+      description: 'This is the description of product 2.',
+      category: CategoryEnum.electronics,
+      rating: RatingModel(count: 2, rate: 4.9),
+    )
   ];
 
   @override

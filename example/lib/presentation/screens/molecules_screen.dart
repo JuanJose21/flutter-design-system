@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_design_system_store/flutter_design_system_store.dart';
+import 'package:flutter_package_api_fake_store/flutter_package_api_fake_store.dart';
 
 class MoleculesScreen extends StatelessWidget {
   MoleculesScreen({super.key});
@@ -17,11 +18,10 @@ class MoleculesScreen extends StatelessWidget {
           child: ListView(
             children: [
               CategoryList(
-                categories: [
-                  CategoryModel(name: 'Business', icon: Icons.business),
-                  CategoryModel(name: 'Entertainment', icon: Icons.movie),
-                  CategoryModel(name: 'General', icon: Icons.public),
-                  CategoryModel(name: 'Technology', icon: Icons.computer),
+                categories: const [
+                  CategoryEnum.electronics,
+                  CategoryEnum.jewelery,
+                  CategoryEnum.mensClothing,
                 ],
                 onCategorySelected: (category) =>
                     print('Category selected: $category'),
