@@ -1,3 +1,7 @@
+## 0.0.6
+
+- Update category list items
+
 ## 0.0.5
 
 - Update example and package

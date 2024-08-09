@@ -1,6 +1,6 @@
 name: flutter_design_system_store
 description: 'A design system for Flutter applications. This package contains a set of widgets and themes to help you build your Flutter applications faster.'
-version: 0.0.5
+version: 0.0.6
 homepage: https://github.com/JuanJose21/flutter-design-system
 
 environment:

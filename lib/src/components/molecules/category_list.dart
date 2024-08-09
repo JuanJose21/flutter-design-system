@@ -16,7 +16,7 @@ import 'package:flutter_package_api_fake_store/flutter_package_api_fake_store.da
 /// ```
 class CategoryList extends StatelessWidget {
   final List<CategoryEnum> categories;
-  final ValueChanged<String> onCategorySelected;
+  final ValueChanged<CategoryEnum> onCategorySelected;
 
   const CategoryList({
     super.key,
@@ -31,7 +31,7 @@ class CategoryList extends StatelessWidget {
       child: Row(
         children: categories.map((category) {
           return GestureDetector(
-            onTap: () => onCategorySelected(category.name),
+            onTap: () => onCategorySelected(category),
             child: Container(
               width: 100,
               height: 100,
