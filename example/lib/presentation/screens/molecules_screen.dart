@@ -65,6 +65,9 @@ class MoleculesScreen extends StatelessWidget {
                 onAddToCart: () {
                   print('Added to cart!');
                 },
+                onRemoveToCart: () {
+                  print('Removed from cart!');
+                },
               )
             ],
           ),

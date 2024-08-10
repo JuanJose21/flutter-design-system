@@ -7,26 +7,49 @@ import 'package:flutter_design_system_store/flutter_design_system_store.dart';
 /// ```dart
 /// ProductCard(
 ///   imageUrl: 'https://via.placeholder.com/150',
-///   title: 'Product Title',
-///   price: '\$100.00',
+///   title: 'Product title',
+///   price: '\$ 100.00',
 ///   onAddToCart: () {
-///     print('Added to cart!');
+///     print('Add to cart');
+///   },
+///   onRemoveToCart: () {
+///     print('Remove to cart');
 ///   },
 /// )
 /// ```
-class ProductCard extends StatelessWidget {
+
+class ProductCard extends StatefulWidget {
   final String imageUrl;
   final String title;
   final String price;
+  final String labelButton;
+  final int quantity;
   final VoidCallback onAddToCart;
+  final VoidCallback onRemoveToCart;
 
   const ProductCard({
     super.key,
+    this.labelButton = 'Agregar al carrito',
+    this.quantity = 0,
     required this.imageUrl,
     required this.title,
     required this.price,
     required this.onAddToCart,
+    required this.onRemoveToCart,
   });
+
+  @override
+  State<ProductCard> createState() => _ProductCardState();
+}
+
+class _ProductCardState extends State<ProductCard> {
+  void _incrementQuantity() {
+    widget.onAddToCart();
+  }
+
+  void _decrementQuantity() {
+    widget.onRemoveToCart();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +64,7 @@ class ProductCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             CustomImage(
-              imageUrl: imageUrl,
+              imageUrl: widget.imageUrl,
               width: double.infinity,
               height: 150.0,
               borderRadius: 12.0,
@@ -49,7 +72,7 @@ class ProductCard extends StatelessWidget {
             ),
             const SizedBox(height: 8.0),
             Text(
-              title,
+              widget.title,
               style: const TextStyle(
                 fontSize: 16.0,
                 fontWeight: FontWeight.bold,
@@ -59,17 +82,34 @@ class ProductCard extends StatelessWidget {
             ),
             const SizedBox(height: 8.0),
             Text(
-              price,
+              widget.price,
               style: const TextStyle(
                 fontSize: 14.0,
                 color: Colors.green,
               ),
             ),
             const SizedBox(height: 8.0),
-            CustomButton(
-              label: 'Add to Cart',
-              onPressed: onAddToCart,
-            ),
+            widget.quantity == 0
+                ? CustomButton(
+                    label: widget.labelButton,
+                    onPressed: () {
+                      _incrementQuantity();
+                    },
+                  )
+                : Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      IconButton(
+                        icon: const Icon(Icons.remove),
+                        onPressed: _decrementQuantity,
+                      ),
+                      Text(widget.quantity.toString()),
+                      IconButton(
+                        icon: const Icon(Icons.add),
+                        onPressed: _incrementQuantity,
+                      ),
+                    ],
+                  ),
           ],
         ),
       ),

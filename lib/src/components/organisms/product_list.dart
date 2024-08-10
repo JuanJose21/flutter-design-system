@@ -43,6 +43,7 @@ class ProductList extends StatelessWidget {
           imageUrl: product.image,
           price: product.price.toString(),
           onAddToCart: () => onProductTap,
+          onRemoveToCart: () => onProductTap,
         );
       },
     );
